@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongodb:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    hostname: florus-mongo
+    container_name: florus-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+    networks:
+      - florus-network
+
+networks:
+  florus-network:
+    name: florus-network
+    external: true
+    
+volumes:
+  mongo-data:
+
