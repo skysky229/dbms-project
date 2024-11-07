@@ -38,6 +38,7 @@ Some test codes require a MinIO bucket to work. In order to create the MinIO buc
 4. Click "Create Bucket" and fill the bucket name as well as some other configurations.
 
 ## Create MinIO Access Keys
+NOTE: for Spark, it will accept username and password as Access Key, so we do not need to create the access key
 Some test codes require a MinIO Access Keys to work. In order to create the MinIO bucket, follow these steps:
 1. Access MinIO UI via localhost:9001
 

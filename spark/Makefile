@@ -1,5 +1,5 @@
 network:
-	docker network create bigdata-network
+	docker network create dbms-network
 	
 build:
 	@make down
